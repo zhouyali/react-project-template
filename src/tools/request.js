@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { LoadingStore } from './../mobx'
 // import qs from 'qs'
-import { Toast, Modal } from 'antd-mobile'
-const alert = Modal.alert
+import { message, notification } from 'antd'
 
 const baseURL = '/'
 const APP_ENV = process.env.REACT_APP_ENV
@@ -51,7 +50,7 @@ request.interceptors.response.use(
     } else {
       // 关闭加载中
       LoadingStore.toggleLoadingStatus(false)
-      Toast.fail(response.message, 1.5, () => {})
+      message.error(response.data.resultMsg, 1)
     }
     return response.data
   },
@@ -71,10 +70,11 @@ request.interceptors.response.use(
     } else {
       msg = '网络错误'
     }
-
-    alert('系统提示', `${msg}，请稍候再试`, [
-      { text: '确定', onPress: () => {} }
-    ])
+    notification.error({
+      message: '系统提示',
+      description: `${msg}，请稍候再试`,
+      onClick: () => {}
+    })
     return Promise.reject(error)
   }
 )

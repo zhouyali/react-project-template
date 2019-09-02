@@ -1,0 +1,80 @@
+.wrap {
+    max-width:1917px;
+    width: 100%;
+    overflow: hidden;
+    height:133px;
+    background:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+    opacity:0.7;
+    position: fixed;
+    z-index:100;
+}
+// 公告页 详情页加这个类
+.detailwrap {
+    background: #000;
+    opacity: 1;
+    height: 60px;
+}
+.content-wrap {
+    height: 45px;
+    line-height: 45px;
+}
+.content {
+    padding: 0 120px;
+    > .fl {
+        margin-top:10px;
+    }
+    > .fr >.fr {
+        padding-top: 10px;
+    }
+}
+.logo {
+    width: 130px;
+    height: 35px;
+    background: url(./../../assets/images/logo.png) no-repeat center center;
+    background-size: 100%;
+    margin-right: 12px
+}
+.price {
+    color:#fff;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    > span {
+        color: #FFF1C2;
+        font-size: 30px;
+        > span {
+            font-size: 14px;
+        }
+    }
+}
+.refresh {
+    width: 22px;
+    height: 30px;
+    line-height: 30px;
+    background: url(./../../assets/images/refresh.png) no-repeat bottom center;
+    background-size: 100%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.tab a,.download{
+    color: #fff;
+    font-size: 20px;
+    height: 35px;
+    line-height: 35px;
+    opacity: .6;
+    padding: 0 4px;
+    cursor: pointer;
+}
+.tab:nth-child(2) {
+    margin-left: 57px;
+    margin-right: 65px;
+}
+.active {
+    border-top: 7px solid #FFF1C2;
+    > a,.download {
+        opacity: 1;
+        display: block;
+        height: 28px;
+        line-height: 28px;
+    }
+}

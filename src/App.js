@@ -3,7 +3,9 @@ import { inject, observer } from 'mobx-react'
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom'
 import { routes } from './router'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import Tabbar from './components/tabbar'
+import Topbar from './components/topbar/index.js'
+import Footer from './components/footer/index.js'
+
 import Loading from './components/loading'
 
 @inject('loadingStore')
@@ -29,7 +31,7 @@ class App extends Component {
     const { location, loadingStore } = this.props
     return (
       <div>
-        <Tabbar />
+        <Topbar/>
         <CSSTransition
           in={loadingStore.isShowLoading}
           classNames="fades"
@@ -55,6 +57,7 @@ class App extends Component {
             </Switch>
           </CSSTransition>
         </TransitionGroup>
+        <Footer />
       </div>
     )
   }

@@ -1,35 +1,177 @@
 .home {
-	text-align: center;
-	min-height: 100vh;
-
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-		height: 40vmin;
-		pointer-events: none
+	.leadapp{
+		width: 145px;
+		height: 195px;
+		background: url(../../assets/images/lead.png) no-repeat center center;
+		background-size: 100%;
+		position: fixed;
+		bottom: -15px;
+		left: -9px;
+		cursor: pointer;
 	}
-
-	.App-header {
-		background-color: #282c34;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-size: calc(10px + 2vmin);
-		color: white
-	}
-
-	.App-link {
-		color: #61dafb
-	}
-
-	@keyframes App-logo-spin {
-		from {
-			transform: rotate(0deg)
-		}
-
-		to {
-			transform: rotate(360deg)
+	.slidewrap {
+		position: relative;
+		height: auto;
+		width: 100%;
+	.ant-carousel .slick-slide {
+		text-align: center;
+		height: auto;
+		width: 100%;
+		overflow: hidden;
+		img {
+			max-width:100%;
+			max-height:100%;
+			min-height: 100%;
+			min-width: 100%;
 		}
 	}
+	  }
+	  .carouselwrap {
+		position: absolute;
+		width: 1118px;
+		height: 70px;
+		line-height: 70px;
+		background: #FFF1D8;
+		padding: 0 30px;
+		left: 50%;
+		margin-left: -559px;
+		bottom: -50px;
+		.news {
+			position: absolute;
+			top: 0px;
+			left: 40px; 
+			height: 70px;
+			line-height: 70px;
+			overflow: hidden;
+		}
+		.ant-carousel .slick-slide {
+			float: right;
+			text-align: center;
+			height: 70px;
+			line-height: 70px;
+			overflow: hidden;
+			span {
+				color: #000000;
+				font-size: 20px;
+			}
+		}
+		> span {
+			padding-left: 40px;
+			color: #B99962;
+			font-size: 20px;
+		}
+		> span::after {
+			content: '';
+			overflow: hidden;
+			display: block;
+			position: absolute;
+			top:23px;
+			width: 26px;
+			height: 23px;
+			background: url(../../assets/images/gonggao.png) no-repeat center center;
+			background-size: 100%;
+		}
+	  }
+	  .intruduce {
+		  background: rgb(255,247,233);
+		  padding: 100px 0;
+		  img {
+			  display: block;
+			  margin:auto;
+			  width: 976px;
+			  height: 436px;
+		  }
+	  }
+	  .imgwrap {
+		background: rgb(255,247,233);
+		img {
+			display: block;
+			margin:auto;
+			width: 100%;
+			height: auto;
+		}
+	  }
+	  .company {
+		background: rgb(255,247,233);
+		padding: 30px 0 90px 0;
+		  img {
+			display: block;
+			margin:auto;
+			width: 1200px;
+			height: auto;
+		}
+	  }
+}
+.appswrap {
+	background: #000;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.detailapp{
+	width: 1118px;
+	height: 170px;
+	padding: 20px 0;
+	margin: 0 auto;
+	> .fl > div {
+		height: 50px;
+		line-height: 50px;
+		cursor: pointer;
+		position: relative;
+	}
+	img {
+		position: absolute;
+		left:0;
+		width: 50px;
+		height: 50px;
+		margin-top: 2px;
+	}
+	.gomebox {
+		margin-top: 25px;
+	}
+	span {
+		padding-left: 69px;
+		font-size: 14px;
+		color: #fff;
+		margin: 0 3px;
+		text-decoration: underline;
+		position: relative;
+	}
+	span::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 4px;
+		left: 108%;
+		width: 15px;
+		height: 10px;
+		background: url(../../assets/images/arrows.png) no-repeat center center;
+		background-size: 100%;
+	}
+	.appload {
+		height: 130px;
+		width: 637px;
+		background:  url(../../assets/images/apps.png) no-repeat center center;
+		background-size: 100%;
+		position: relative;
+		> div {
+			position: absolute;
+			width: 21px;
+			height: 21px;
+			background: url(../../assets/images/close.png) no-repeat center center;
+			background-size: 100%;
+			left:102%;
+			top:-5px;
+			cursor: pointer;
+		}
+	}
+}
+.hide {
+	margin-left: -100%;
+	transition: margin-left 1s ease-in-out;
+}
+.show {
+	margin-left: 0;
+	transition: margin-left 1s ease-in-out;
 }
